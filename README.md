@@ -8,10 +8,10 @@ Slack上の特定グループかつ数字から始まる名前のメンバーに
 
 ## OAuth & Permissions（権限の設定）
 左サイドメニューの "OAuth & Permissions" を開き、"Scopes" セクションまでスクロールします。"Bot Token Scopes" に以下の権限を追加してください。
-・channels:history
-・channels:read
-・chat:write
-・users:read
+- channels:history 
+- channels:read
+- chat:write
+- users:read
 
 ## アプリのインストールとトークンの取得
 権限を追加したら、同じページの上部にある "Install to Workspace" ボタンをクリックします。
