@@ -12,14 +12,17 @@ from slack_sdk.errors import SlackApiError
 # ─── 設定 ─────────────────────────────────
 SLACK_TOKEN         = os.environ["SLACK_BOT_TOKEN"]
 
-REPORT_CHANNEL_ID   = "CHANNEL_ID"  # Put channnel ID
+REPORT_CHANNEL_ID   = "CHANNEL_ID"  # Put channnel ID　レポートを読み取るチャンネルのID
 
 GROUP_CHANNELS = {
     "Group A": "Group A Channel ID",
     "Group B": "Group B Channel ID",
     "Group C": "Group C Channel ID",  
 
-} # Channel ID mapping for each group to be notified
+} 
+# Channel ID mapping for each group to be notified
+# リマインドを行うチャンネルのID
+
 
 client = WebClient(token=SLACK_TOKEN)
 
