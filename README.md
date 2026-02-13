@@ -5,7 +5,6 @@ A bot that extracts posts on Slack made by members of a specific group whose nam
 Slack上の特定グループかつ数字から始まる名前のメンバーによる投稿を抽出し、メンションにてリマインドを行うボット
 
 # How to use 使い方
-
 ## OAuth & Permissions（権限の設定）
 左サイドメニューの "OAuth & Permissions" を開き、"Scopes" セクションまでスクロールします。"Bot Token Scopes" に以下の権限を追加してください。
 - channels:history 
@@ -23,6 +22,12 @@ SLACK_BOT_TOKENをコピーして、以下の手順でトークンを設定し�
 - Secrets and variables
 - Actions
 - New repository secret
+
+## チャンネルIDの取得
+scripts/notify_non_reporters.pyに、Channel IDを設定する。
+REPORT_CHANNEL_IDには、レポートを読み取るチャンネルのIDを設定する。
+GROUP_CHANNELSはリマインドを行うチャンネルのIDを設定する。複数のグループを設定することが可能。
+
 
 ## アプリをチャンネルに招待する
 APIの設定を完了後、ボットをSlackのチャンネルに招待する。
