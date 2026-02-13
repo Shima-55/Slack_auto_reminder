@@ -1,0 +1,25 @@
+# .github/workflows/slack-report-reminder.yml
+name: "Slack auto reminder"
+
+on:
+  workflow_dispatch: 
+  schedule:
+    - cron: '40 5 8 * *'  #  14:40 JST 
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - name: Install deps
+        run: pip install slack-sdk
+      - name: Run reminder
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        run: | 
+          python scripts/notify_non_reporters.py
+          
