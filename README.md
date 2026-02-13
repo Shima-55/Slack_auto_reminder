@@ -16,13 +16,13 @@ Slack上の特定グループかつ数字から始まる名前のメンバーに
 ## アプリのインストールとトークンの取得
 権限を追加したら、同じページの上部にある "Install to Workspace" ボタンをクリックします。
 インストールが完了すると、xoxb- で始まる "Bot User OAuth Token" が表示されます。
-SLACK_BOT_TOKEN, SLACK_USER_SECRETをコピーして、以下の手順でトークンを設定します。
+SLACK_BOT_TOKENをコピーして、以下の手順でトークンを設定します。
 
-1.GitHubリポジトリ
-2.Settings
-3.Secrets and variables
-4.Actions
-5.New repository secret
+- GitHubリポジトリ
+- Settings
+- Secrets and variables
+- Actions
+- New repository secret
 
 ## アプリをチャンネルに招待する
 APIの設定を完了後、ボットをSlackのチャンネルに招待する。
